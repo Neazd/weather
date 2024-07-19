@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="weather-widget">
+        <div class="search-bar">
+            <i class="fas fa-map-marker-alt location-icon"></i>
+            <input type="text" id="city-input" placeholder="Enter City">
+            <i class="fas fa-search search-icon" onclick="getWeather()"></i>
+        </div>
+        <div id="error-message" class="error-message"></div>
+        <div class="weather-info">
+            <i id="weather-icon" class="fas fa-cloud-showers-heavy weather-icon"></i>
+            <div id="temperature" class="temperature"><sup>°C</sup></div>
+            <div id="description" class="description"></div>
+        </div>
+        <div class="additional-info">
+            <div class="info-item">
+                <i class="fas fa-tint humidity-icon"></i>
+                <span id="humidity"></span>
+                <span>Humidity</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-wind wind-icon"></i>
+                <span id="wind-speed"></span>
+                <span>Wind Speed</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
